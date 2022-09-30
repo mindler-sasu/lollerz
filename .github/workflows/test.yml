@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: mindler-sasu/action-validate-pr-ticket@v1.0.3
+      - uses: mindler-sasu/action-validate-pr-ticket@v1.0.2
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
