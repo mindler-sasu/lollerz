@@ -1,0 +1,22 @@
+name: 'build-test'
+on: # rebuild any PRs and main branch changes
+  pull_request:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+  push:
+    branches:
+      - main
+      - 'releases/*'
+
+jobs:
+  test: # make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: mindler-sasu/action-validate-pr-ticket@v1
+
+          
